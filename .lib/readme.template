@@ -29,6 +29,8 @@ To get all repos installed and setup:
 git config --global github.user gorenje #### replace gorenje with your github user name
 git clone git@github.com:adtekio/adtekio.github.io.git adtekio
 cd adtekio
+gem install bundler
+bundle
 rake project:adtekio:setup_git
 </pre>
 
