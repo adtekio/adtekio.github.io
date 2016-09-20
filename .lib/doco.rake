@@ -30,7 +30,7 @@ module ReadmeMacros
 
     links = external_links(attrs)
     "| \"#{name}\":#{url} | #{attrs[:description]} #{links} #{herkou_links} |" +
-      (attrs[:travis] ? " #{trvlogo} |" : " &nbsp; |") +
+      (attrs[:travis] ? " #{trvlogo}" : "") +
       (attrs[:heroku] ? " #{deploy_to_heroku(url)} |" : " &nbsp; |")
   end
 
