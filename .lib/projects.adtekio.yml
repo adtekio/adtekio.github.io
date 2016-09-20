@@ -1,0 +1,168 @@
+---
+github:
+  owner: adtekio
+repos:
+  consumers:
+    :description: >
+      Kafka consumers used for: updating click statistics, matching users to
+      adnetworks (aka user attribution) and server-to-server (aka postbacks)
+      communication to the adnetworks for specific in-app events.
+    :category: "Kafka"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :applink:
+      - https://consumers.adtek.io
+    :heroku:
+      production: git@heroku.com:consumers.git
+    :forks:
+      - gorenje
+  dashboard:
+    :description: >
+      Central dashboard for analytics and configuration of adnetworks. It
+      provides an overview of campaign performance and campaign fraud.
+    :category: "Frontend"
+    :travis: false
+    :deprecated: false
+    :opensource: false
+    :applink:
+      - https://dashboard.adtek.io
+    :heroku:
+      production: git@heroku.com:analyist.git
+    :forks:
+      - gorenje
+      - wlf
+  website:
+    :description: >
+      Landing page and start page.
+    :category: "Frontend"
+    :travis: false
+    :deprecated: false
+    :opensource: false
+    :applink:
+      - https://adtek.herokuapp.com
+    :heroku:
+      production: git@heroku.com:adtek.git
+    :forks:
+      - gorenje
+      - revueltai
+  kafkastore:
+    :description: >
+      Bridge between load balancers (i.e. tracking endpoints) and kafka.
+      Its main responsible to collect single events (i.e. campaign link
+      clicks and in-app events) together and batch insert these into kafka.
+    :category: "Kafka"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :applink:
+      - http://kafkastore.adtek.io
+    :heroku:
+      production: git@heroku.com:kafkastore.git
+    :forks:
+      - gorenje
+  loadbalancer.inapp:
+    :description: >
+      In-app tracking endpoint. Providing load balancing and ssl termination
+      for in-app tracking calls. It pushes these events off to the kafkastore
+      for eventual storage in kafka.
+    :category: "Load Balancer"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :applink:
+      - https://inapp.adtek.io
+      - https://3dfdr1xbpcey.adtek.io
+    :heroku:
+      production: git@heroku.com:inapptrack.git
+    :forks:
+      - gorenje
+  loadbalancer.clicks:
+    :description: >
+      Campaign click tracking. It redirects campaign clicks to the correct
+      application store (i.e. Apples or Googles) and passes click events
+      onto the kafkastore for eventual storage in kafka. It also provides
+      SSL termination and load balancing.
+    :category: "Load Balancer"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :applink:
+      - https://clicks.adtek.io
+      - https://tracking.adtek.io
+    :heroku:
+      production: git@heroku.com:clicktrak.git
+    :forks:
+      - gorenje
+  tracking.gem:
+    :description: >
+      Gem for generating in-app tracking events. Its a demostration of what
+      an SDK needs to do.
+    :category: "Gem & SDK"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :forks:
+      - gorenje
+  tracking.ios:
+    :description: >
+      iOS SDK for tracking
+    :category: "Gem & SDK"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :forks:
+      - gorenje
+  adnetworks:
+    :description: >
+      Collection of importers for various Adnetworks.
+    :category: "Gem & SDK"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :forks:
+      - gorenje
+  utilities:
+    :description: >
+      Collection of utilities required across applications.
+    :category: "Gem & SDK"
+    :travis: true
+    :deprecated: false
+    :opensource: true
+    :forks:
+      - gorenje
+  accounting:
+    :description: >
+      Application for handling payments and accounting.
+    :category: "Frontend"
+    :travis: false
+    :deprecated: false
+    :opensource: false
+    :applink:
+      - https://accounting.adtek.io
+    :heroku:
+      production: git@heroku.com:adtekacc.git
+    :forks:
+      - gorenje
+  adtekio_encrypt:
+    :description: Microgem for encrypting stuff - replaced by utilities
+    :category: "Gem"
+    :travis: false
+    :deprecated: true
+    :gist: "1a5aed709918013b30e0ffde5405e15e"
+    :opensource: true
+  adtekio_host_handler:
+    :description:
+      Microgem for handling ENV['*_HOST'] values - replaced by utilities
+    :category: "Gem"
+    :travis: false
+    :deprecated: true
+    :gist: "7ed69e4a1de2568970a69d166e1b6b0f"
+    :opensource: true
+
+forkmap:
+  gorenje: gerrit
+  wlf: robert
+  revueltai: nacho
+  stefan-mees: smees
+  florianroesler: florian
