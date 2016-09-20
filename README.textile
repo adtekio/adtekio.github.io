@@ -34,41 +34,41 @@ bundle
 rake project:adtekio:setup_git
 </pre>
 
-h1. Git Repos
+h1. Repositories
 
 h2. Frontend
 
 | "accounting":https://github.com/adtekio/accounting | Application for handling payments and accounting.
- "&#128279;":https://accounting.adtek.io | &nbsp; | &nbsp; | !.images/heroku.png!:https://dashboard.heroku.com/apps/adtekacc | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/accounting |
+ "&#128279;":https://accounting.adtek.io !.images/heroku.png!:https://dashboard.heroku.com/apps/adtekacc | &nbsp; | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/accounting |
 | "dashboard":https://github.com/adtekio/dashboard | Central dashboard for analytics and configuration of adnetworks. It provides an overview of campaign performance and campaign fraud.
- "&#128279;":https://dashboard.adtek.io | &nbsp; | &nbsp; | !.images/heroku.png!:https://dashboard.heroku.com/apps/analyist | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/dashboard |
+ "&#128279;":https://dashboard.adtek.io !.images/heroku.png!:https://dashboard.heroku.com/apps/analyist | &nbsp; | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/dashboard |
 | "website":https://github.com/adtekio/website | Landing page and start page.
- "&#128279;":https://adtek.herokuapp.com | &nbsp; | &nbsp; | !.images/heroku.png!:https://dashboard.heroku.com/apps/adtek | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/website |
+ "&#128279;":https://adtek.herokuapp.com !.images/heroku.png!:https://dashboard.heroku.com/apps/adtek | &nbsp; | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/website |
 
 h2. Gem & SDK
 
 | "adnetworks":https://github.com/adtekio/adnetworks | Collection of importers for various Adnetworks.
-  | !https://travis-ci.org/adtekio/adnetworks.svg?branch=master!:https://travis-ci.org/adtekio/adnetworks | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | &nbsp; | &nbsp; |
+   | !https://travis-ci.org/adtekio/adnetworks.svg?branch=master!:https://travis-ci.org/adtekio/adnetworks | &nbsp; |
 | "tracking.gem":https://github.com/adtekio/tracking.gem | Gem for generating in-app tracking events. Its a demostration of what an SDK needs to do.
-  | !https://travis-ci.org/adtekio/tracking.gem.svg?branch=master!:https://travis-ci.org/adtekio/tracking.gem | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | &nbsp; | &nbsp; |
+   | !https://travis-ci.org/adtekio/tracking.gem.svg?branch=master!:https://travis-ci.org/adtekio/tracking.gem | &nbsp; |
 | "tracking.ios":https://github.com/adtekio/tracking.ios | iOS SDK for tracking
-  | !https://travis-ci.org/adtekio/tracking.ios.svg?branch=master!:https://travis-ci.org/adtekio/tracking.ios | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | &nbsp; | &nbsp; |
+   | !https://travis-ci.org/adtekio/tracking.ios.svg?branch=master!:https://travis-ci.org/adtekio/tracking.ios | &nbsp; |
 | "utilities":https://github.com/adtekio/utilities | Collection of utilities required across applications.
-  | !https://travis-ci.org/adtekio/utilities.svg?branch=master!:https://travis-ci.org/adtekio/utilities | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | &nbsp; | &nbsp; |
+   | !https://travis-ci.org/adtekio/utilities.svg?branch=master!:https://travis-ci.org/adtekio/utilities | &nbsp; |
 
 h2. Kafka
 
 | "consumers":https://github.com/adtekio/consumers | Kafka consumers used for: updating click statistics, matching users to adnetworks (aka user attribution) and server-to-server (aka postbacks) communication to the adnetworks for specific in-app events.
- "&#128279;":https://consumers.adtek.io | !https://travis-ci.org/adtekio/consumers.svg?branch=master!:https://travis-ci.org/adtekio/consumers | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | !.images/heroku.png!:https://dashboard.heroku.com/apps/consumers | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/consumers |
+ "&#128279;":https://consumers.adtek.io !.images/heroku.png!:https://dashboard.heroku.com/apps/consumers | !https://travis-ci.org/adtekio/consumers.svg?branch=master!:https://travis-ci.org/adtekio/consumers | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/consumers |
 | "kafkastore":https://github.com/adtekio/kafkastore | Bridge between load balancers (i.e. tracking endpoints) and kafka. Its main responsible to collect single events (i.e. campaign link clicks and in-app events) together and batch insert these into kafka.
- "&#128279;":http://kafkastore.adtek.io | !https://travis-ci.org/adtekio/kafkastore.svg?branch=master!:https://travis-ci.org/adtekio/kafkastore | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | !.images/heroku.png!:https://dashboard.heroku.com/apps/kafkastore | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/kafkastore |
+ "&#128279;":http://kafkastore.adtek.io !.images/heroku.png!:https://dashboard.heroku.com/apps/kafkastore | !https://travis-ci.org/adtekio/kafkastore.svg?branch=master!:https://travis-ci.org/adtekio/kafkastore | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/kafkastore |
 
 h2. Load Balancer
 
 | "loadbalancer.clicks":https://github.com/adtekio/loadbalancer.clicks | Campaign click tracking. It redirects campaign clicks to the correct application store (i.e. Apples or Googles) and passes click events onto the kafkastore for eventual storage in kafka. It also provides SSL termination and load balancing.
- "&#128279;":https://clicks.adtek.io "&#128279;":https://tracking.adtek.io | !https://travis-ci.org/adtekio/loadbalancer.clicks.svg?branch=master!:https://travis-ci.org/adtekio/loadbalancer.clicks | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | !.images/heroku.png!:https://dashboard.heroku.com/apps/clicktrak | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/loadbalancer.clicks |
+ "&#128279;":https://clicks.adtek.io "&#128279;":https://tracking.adtek.io !.images/heroku.png!:https://dashboard.heroku.com/apps/clicktrak | !https://travis-ci.org/adtekio/loadbalancer.clicks.svg?branch=master!:https://travis-ci.org/adtekio/loadbalancer.clicks | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/loadbalancer.clicks |
 | "loadbalancer.inapp":https://github.com/adtekio/loadbalancer.inapp | In-app tracking endpoint. Providing load balancing and ssl termination for in-app tracking calls. It pushes these events off to the kafkastore for eventual storage in kafka.
- "&#128279;":https://inapp.adtek.io "&#128279;":https://3dfdr1xbpcey.adtek.io | !https://travis-ci.org/adtekio/loadbalancer.inapp.svg?branch=master!:https://travis-ci.org/adtekio/loadbalancer.inapp | !https://github.com/adtekio/init/blob/master/.images/os.png!:http://opensource.org | !.images/heroku.png!:https://dashboard.heroku.com/apps/inapptrack | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/loadbalancer.inapp |
+ "&#128279;":https://inapp.adtek.io "&#128279;":https://3dfdr1xbpcey.adtek.io !.images/heroku.png!:https://dashboard.heroku.com/apps/inapptrack | !https://travis-ci.org/adtekio/loadbalancer.inapp.svg?branch=master!:https://travis-ci.org/adtekio/loadbalancer.inapp | !https://www.herokucdn.com/deploy/button.png!:https://heroku.com/deploy?template=https://github.com/adtekio/loadbalancer.inapp |
 
 
 h1. Adding a new repo

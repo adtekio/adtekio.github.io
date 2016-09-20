@@ -26,11 +26,11 @@ module ReadmeMacros
                 end
               end
 
+    herkou_links = attrs[:heroku] ? heroku_links(attrs[:heroku],owner) : ""
+
     links = external_links(attrs)
-    "| \"#{name}\":#{url} | #{attrs[:description]} #{links} |" +
+    "| \"#{name}\":#{url} | #{attrs[:description]} #{links} #{herkou_links} |" +
       (attrs[:travis] ? " #{trvlogo} |" : " &nbsp; |") +
-      (attrs[:opensource] ? " #{opensource_logo(owner)} |" : " &nbsp; |") +
-      (attrs[:heroku] ? " #{heroku_links(attrs[:heroku],owner)} |" : " &nbsp; |") +
       (attrs[:heroku] ? " #{deploy_to_heroku(url)} |" : " &nbsp; |")
   end
 

@@ -34,7 +34,7 @@ bundle
 rake project:adtekio:setup_git
 </pre>
 
-h1. Git Repos
+h1. Repositories
 
 [[CurrentRepos]]
 
